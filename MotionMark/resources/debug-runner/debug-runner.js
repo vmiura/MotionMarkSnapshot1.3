@@ -688,6 +688,7 @@ Utilities.extendObject(window.benchmarkController, {
             return false;
 
         setTimeout(function() {
+            benchmarkController.determineCanvasSize();
             this._startBenchmark(benchmarkController.suites, benchmarkController.options, "running-test");
         }.bind(this), 0);
         return true;
